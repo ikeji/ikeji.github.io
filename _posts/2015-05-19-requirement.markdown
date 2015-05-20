@@ -25,4 +25,4 @@ DNSサーバーのZONE設定を確認したところ、4週間は、セカンダ
 
 4週間以内に、何らかの方向でDNSサーバーとwordpressを復帰するのを目指そう。
 
-[gitzone][https://github.com/dyne/gitzone]
+[gitzone]: https://github.com/dyne/gitzone
