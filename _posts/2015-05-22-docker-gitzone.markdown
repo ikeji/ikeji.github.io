@@ -2,7 +2,7 @@
 layout: post
 title: "Dockerでgitzoneをパッケージしてみる"
 date: 2015-05-22 02:11:22 -0700
-categories: docker
+categories: Docker
 ---
 とりあえず、手始めに[gitzone][gitzone]をパッケージしてみる。
 

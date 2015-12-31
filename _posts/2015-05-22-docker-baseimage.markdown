@@ -2,7 +2,7 @@
 layout: post
 title: "dockerのベースイメージはどれがいいのか？"
 date: 2015-05-22 01:47:49 -0700
-categories: docker
+categories: Docker
 ---
 さて、dockerイメージを作りはじめたい訳だが、どのイメージを作るのがよいのだろうか？
 
