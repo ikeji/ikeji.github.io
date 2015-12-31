@@ -22,3 +22,6 @@ post:
 
 clean:
 	rm -rf _site
+
+list_categories:
+	grep -h categories: _posts/* | cut -d ":" -f 2 | tr ' ' '\n' | sed /^$$/d | sort | uniq
