@@ -1,11 +1,11 @@
 all:
-	jekyll build
+	bundle exec jekyll build
 
 publish:
 	git push
 
 serve:
-	jekyll serve
+	bundle exec jekyll serve
 
 post:
 	test -n "$(title)" || read -p "Enter a title for your post: " title; \
