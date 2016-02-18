@@ -1,0 +1,35 @@
+---
+layout: post
+title: "Qemuでのホスト-ゲスト間ファイル共有 by 9p"
+date: 2016-02-12 20:33:48 -0800
+categories: Linux
+---
+Linux上で動かしてるQemuの中で動かしているLinuxから、ホストLinuxにあるファイルへアクセスしたい。
+
+[調べたところ][1]、libvirtと9pプロトコル経由で可能であるという事。
+とりあえず、次のコマンドラインオプションをqemuにつけた。
+
+```
+-virtfs local,path=.,mount_tag=<タグ>,security_model=none
+```
+
+中のLinux側は、9pとvirtioのドライバが必要。
+Ubuntuとかだとカーネルモジュールになっていた。
+
+```
+modprobe 9pnet_virtio
+modprobe 9p
+```
+
+tinycorelinuxだとモジュールにすらなっていないので、
+カーネルソースを持ってきて、モジュールを作る必要がある。
+tinycorelinuxでのカーネルモジュールの作成は[このページ][2]が参考になった。
+
+```
+mount -t 9p -o trans=virtio <tag> <mount point>
+```
+
+でマウントできた。
+
+[1]: http://wiki.qemu.org/Documentation/9psetup
+[2]: http://www2.asu.ac.jp/hachi/v3/tinycore477cp932.html
