@@ -1,8 +1,8 @@
 # Site settings
-title: VPSがオオアリクイに殺されて1ヶ月が過ぎました
+title: ikejiのblog (VPSがオオアリクイに殺されて1ヶ月が過ぎました)
 email: syun@ikejima.org
-description: > # this means to ignore newlines until "baseurl:"
-  メインのBlogが置いてあったVPSが音信不通になったので、しばらくの避難所
+description: >
+  メインのBlogが置いてあったVPSが音信不通になったので、移転しました。ドメインはそのうちかえます。
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://ikeji.github.io" # the base hostname & protocol for your site
 twitter_username: ikeji
