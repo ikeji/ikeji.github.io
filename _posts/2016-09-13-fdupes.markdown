@@ -1,0 +1,17 @@
+---
+layout: post
+title: "重複したファイルをfdupesで削除"
+date: 2016-09-13 23:19:47 -0700
+categories: Unix
+---
+ファイルを整理していたら、同じファイルをコピーしたものが混じってしまった。
+その場合、[fdupesコマンド][1]でそれを検索、削除もできる。
+
+fdupesはubuntuなどではパッケージに入ってる。
+
+次のコマンドで削除できる。注意
+{% highlight text %}
+fdupes -r -d -N dir
+{% endhighlight %}
+
+[1]: https://github.com/adrianlopezroche/fdupes
