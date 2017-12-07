@@ -18,7 +18,8 @@ post:
 		echo "title: \"$$title\""                       >> $$post_path; \
 		echo "date: `date +"%Y-%m-%d %H:%M:%S %z"`"     >> $$post_path; \
 		echo "categories: "                             >> $$post_path; \
-		echo "---"                                      >> $$post_path;
+		echo "---"                                      >> $$post_path; \
+		$(EDITOR) $$post_path
 
 clean:
 	rm -rf _site
