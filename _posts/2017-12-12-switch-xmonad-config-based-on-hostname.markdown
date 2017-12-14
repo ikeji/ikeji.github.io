@@ -33,7 +33,7 @@ myTerminal "bar" = "mrxvt"
 myLayout "foo" = ThreeCol  1 (3/100) (1/3)
 myLayout "foo" = Tall 1 (3/100) (1/2)
 {% endhighlight %}
-という風に定義すると、myLayout関数の返り値が定義によって違うためエラーになる。
+という風に定義すると、myLayout関数の返り値の型が定義によって違うためエラーになる。
 
 仕方ないので、
 {% highlight haskell %}
